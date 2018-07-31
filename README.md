@@ -1,11 +1,5 @@
 # TEYIXING LOGIN
 
-## Installing / Getting started
-
-Here you should say what actually happens when you execute the code above.
-
-## Developing
-
 ### Prerequisites
 
 - Node 9+
