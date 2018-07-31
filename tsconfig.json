@@ -1,7 +1,24 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "strictPropertyInitialization": false,
+    "baseUrl": "src",
+    "paths": {
+      "@modules/*": ["app/shared/modules/*"],
+      "@services/*": ["app/shared/services/*"],
+      "@models/*": ["app/shared/models/*"],
+      "@utils/*": ["app/shared/utils/*"],
+      "@routers/*": ["app/shared/routers/*"],
+      "@pages/*": ["app/pages/*"],
+      "@config/*": ["app/config/*"],
+      "@app/*": ["app/*"]
+    },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -9,12 +26,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ]
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"]
   }
 }

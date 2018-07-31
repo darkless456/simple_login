@@ -1,27 +1,58 @@
-# TeYiXingWeb
+# TEYIXING LOGIN
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+## Installing / Getting started
 
-## Development server
+Here you should say what actually happens when you execute the code above.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Developing
 
-## Code scaffolding
+### Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node 9+
+- NPM 5.6+
+- Angular CLI
+- Typescript
+- Covalent 2.0+
+- TSLint
 
-## Build
+### Built With
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Recommand yarn instead of npm, specially when you install node_modules
 
-## Running unit tests
+```shell
+npm i -g yarn@latest
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Install Angular CLI
 
-## Running end-to-end tests
+```shell
+npm i -g @angular/cli@latest
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Install Typescript and tslint
 
-## Further help
+```shell
+npm i -g typescript
+npm i -g tslint
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Install node_modules
+
+```shell
+npm install | yarn install
+```
+
+## Tests
+
+Describe and show how to run the tests with code examples.
+Explain what these tests test and why.
+
+```shell
+ng serve
+```
+
+Open your browser with
+
+```url
+localhost:4200
+```

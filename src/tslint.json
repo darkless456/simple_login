@@ -1,17 +1,19 @@
 {
-    "extends": "../tslint.json",
-    "rules": {
-        "directive-selector": [
-            true,
-            "attribute",
-            "app",
-            "camelCase"
-        ],
-        "component-selector": [
-            true,
-            "element",
-            "app",
-            "kebab-case"
-        ]
-    }
+  "extends": "tslint-angular",
+  "rules": {
+    "comment-format": false,
+    "curly": false,
+    "eofline": false,
+    "import-spacing": false,
+    "indent": false,
+    "max-line-length": false,
+    "no-trailing-whitespace": false,
+    "one-line": false,
+    "quotemark": false,
+    "semicolon": false,
+    "typedef-whitespace": false,
+    "whitespace": false,
+    "angular-whitespace": false,
+    "max-classes-per-file": false
+  }
 }

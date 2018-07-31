@@ -1,0 +1,56 @@
+<div layout="column" layout-fill>
+  <mat-toolbar color="primary" class="mat-whiteframe-z1">
+    <mat-toolbar-row>
+      <span>Login</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div class="mat-content">
+    <div layout-gt-xs="row" layout-align-gt-xs="left">
+      <div flex-gt-xs="50">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              <h2>账号登陆</h2>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <form [formGroup]="loginForm">
+              <div layout="row">
+                <mat-form-field flex [hideRequiredMarker]="true" floatLabel="auto">
+                  <input matInput formControlName="accountControl" type="text"
+                    name="account" required>
+                  <mat-placeholder>
+                    请输入手机号/邮箱
+                  </mat-placeholder>
+                  <mat-error>
+                    <span *ngIf="loginForm.get('accountControl').touched && loginForm.get('accountControl').hasError('required')">手机号/邮箱不能为空</span>
+                    <span *ngIf="loginForm.get('accountControl').touched && loginForm.get('accountControl').dirty && loginForm.get('accountControl').hasError('pattern')">手机号/邮箱格式错误</span>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div layout="row">
+                <mat-form-field flex [hideRequiredMarker]="true" floatLabel="auto">
+                  <input matInput formControlName="passwordControl" type="password"
+                    name="password" required>
+                  <mat-placeholder>
+                    请输入密码
+                  </mat-placeholder>
+                  <mat-error>
+                    <span *ngIf="loginForm.get('passwordControl').touched && loginForm.get('passwordControl').hasError('required')">密码不能为空</span>
+                    <span *ngIf="loginForm.get('passwordControl').hasError('minlength')">密码最低要求8位</span>
+                    <span *ngIf="loginForm.get('passwordControl').hasError('maxlength')">密码最多可有16位</span>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </form>
+            <a mat-button class="pull-right" (click)="resetPassword()">忘记密码?</a>
+          </mat-card-content>
+          <mat-card-actions layout="row">
+            <button flex mat-raised-button color="primary" [disabled]="loginForm.invalid"
+              (click)="login()">登陆</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
